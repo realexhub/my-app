@@ -1,8 +1,15 @@
 import React from 'react'
 import { LinkComponent } from '../utils/links'
+import { useGlobalContext } from '../context'
 const HeaderComp = () => {
+
+ const {isSideBarOpen,openSideBar,closeSideBar}=useGlobalContext();
+ 
+
   return (
    <><header>
+
+    <button id='btnC' onClick={openSideBar}  width="200" value='test'>asda asd</button>
    <div className="collapse bg-dark" id="navbarHeader">
      <div className="container">
        <div className="row">
@@ -11,7 +18,7 @@ const HeaderComp = () => {
            <p className="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
          </div>
          <div className="col-sm-4 offset-md-1 py-4">
-           <h4 className="text-white">Contact</h4>
+           <h4 className="text-white">{`${isSideBarOpen ? "true" : "false"}`}</h4>
            {/* <ul className="list-unstyled">
              <li><a href="#" className="text-white">Follow on Twitter</a></li>
              <li><a href="#" className="text-white">Like on Facebook</a></li>
