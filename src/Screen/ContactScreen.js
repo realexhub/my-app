@@ -7,7 +7,7 @@ const ContactScreen = () => {
 <div className="container py-4">
   <form id="contactForm">
     <div className="mb-3">
-      <label className="form-label" htmlFor="name">Name test1</label>
+      <label className="form-label" htmlFor="name">Name</label>
       <input className="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
       <div className="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
     </div>
